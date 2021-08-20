@@ -20,7 +20,7 @@ namespace RazorPagesMovie.Pages.Movies
             _context = context;
         }
 
-        [BindProperty]
+        [BindProperty] // attribute enables Model binding.
         public Movie Movie { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)

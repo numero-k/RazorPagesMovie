@@ -29,6 +29,8 @@ namespace RazorPagesMovie
 
             services.AddDbContext<RazorPagesMovieContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("RazorPagesMovieContext")));
+
+            // The RazorPagesMovieContext object handles the task of connecting to the database and mapping Movie objects to database records.
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

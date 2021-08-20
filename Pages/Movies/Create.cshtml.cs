@@ -30,10 +30,13 @@ namespace RazorPagesMovie.Pages.Movies
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
+            // a return statement must be provided.
+            // is run when the page posts form data.
         {
             if (!ModelState.IsValid)
             {
                 return Page();
+                // creates a PageResult object renders the Create.cshtml page.
             }
 
             _context.Movie.Add(Movie);
