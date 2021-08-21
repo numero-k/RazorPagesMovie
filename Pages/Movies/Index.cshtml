@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{searchString?}"
 @model RazorPagesMovie.Pages.Movies.IndexModel
 
 @{
@@ -11,6 +11,15 @@ When an At sign symbol is followed by a Razor reserved keyword, it transitions i
 <p>
 	<a asp-page="Create">Create New</a>
 </p>
+<form>
+	<p>
+		<select asp-for="MovieGenre" asp-items="Model.Genres">
+			<option value="">All</option>
+		</select>
+		Title: <input type="text" asp-for="SearchString" />
+		<input type="submit" value="Filter" />
+	</p>
+</form>
 <table class="table">
 	<thead>
 		<tr>
