@@ -51,6 +51,7 @@ namespace RazorPagesMovie.Pages.Movies
             }
             Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
             Movie = await _context.Movie.ToListAsync();
+            
         }
     }
 }
